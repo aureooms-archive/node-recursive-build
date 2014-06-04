@@ -90,6 +90,8 @@ var recbuild_t = function(opt) {
 
 				}
 
+				rhandle('/* ' + path + ' */');
+
 				if (fs.existsSync(path + '/' + opt.intro)) fhandle(path + '/' + opt.intro);
 				else if (opt.rec) rhandle(__INTRO2_);
 				child(path + '/', e, level + 1, fhandle, rhandle, false);
@@ -99,6 +101,8 @@ var recbuild_t = function(opt) {
 			else if (level >= 0 && e.match(/.+\.js$/g) !== null) {
 
 				info(".js file '%s'", path);
+				rhandle('/* ' + path + ' */');
+				
 				if(opt.flat){
 
 					action("@ extend(true, exports, require('%s'));", path);
