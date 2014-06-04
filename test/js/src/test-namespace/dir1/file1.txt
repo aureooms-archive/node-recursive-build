@@ -1,0 +1,1 @@
+exports.txtprop1 = true;

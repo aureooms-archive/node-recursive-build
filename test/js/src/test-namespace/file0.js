@@ -1,0 +1,1 @@
+exports.prop0 = true;

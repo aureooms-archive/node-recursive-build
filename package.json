@@ -1,0 +1,34 @@
+{
+  "name": "recbuild",
+  "version": "0.0.1",
+  "description": "recursive build for node",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "export DIR=node_modules/qunit/support/qunit/qunit && mkdir -p $DIR && cp support/qunit.js $DIR/ && node test/js/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aureooms@github.com/aureooms/recbuild.git"
+  },
+  "keywords": [
+    "node",
+    "recursive",
+    "build",
+    "auto"
+  ],
+  "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
+  "license": "GPL v2",
+  "bugs": {
+    "url": "https://github.com/aureooms/recbuild/issues"
+  },
+  "homepage": "https://aureooms.github.io/recbuild",
+  "dependencies": {
+    "cli-color": "^0.3.2",
+    "node.extend": "^1.0.10",
+    "uglify-js": "^2.4.13"
+  },
+  "devDependencies": {
+    "qunit": "git://github.com/gotwarlost/node-qunit.git#istanbul-coverage",
+    "coveralls": "^2.10.0"
+  }
+}
