@@ -1,6 +1,6 @@
 {
   "name": "recbuild",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "recursive build for node",
   "main": "js/index.js",
   "scripts": {
@@ -24,8 +24,7 @@
   "homepage": "https://aureooms.github.io/recbuild",
   "dependencies": {
     "cli-color": "^0.3.2",
-    "node.extend": "^1.0.10",
-    "uglify-js": "^2.4.13"
+    "node.extend": "^1.0.10"
   },
   "devDependencies": {
     "qunit": "git://github.com/gotwarlost/node-qunit.git#istanbul-coverage",
