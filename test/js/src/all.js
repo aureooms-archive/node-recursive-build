@@ -40,8 +40,6 @@ test('ff', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -72,8 +70,6 @@ test('ft', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -100,8 +96,6 @@ test('tf', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -138,8 +132,6 @@ test('tt', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -172,8 +164,6 @@ test('ff-2', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -201,8 +191,6 @@ test('ft-2', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -228,8 +216,6 @@ test('tf-2', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {
@@ -263,8 +249,6 @@ test('tt-2', function (assert) {
 
 	var exports = {};
 
-	console.log('========================== NEW ++++////');
-	console.log(code.join('\n'));
 	eval(code.join('\n'));
 
 	var ref = {

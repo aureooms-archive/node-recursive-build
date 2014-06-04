@@ -44,11 +44,7 @@ var recbuild_t = function(opt) {
 
 	var recbuild = function(dir, exports, level, fhandle, rhandle, origin) {
 
-		console.log.apply(console, arguments);
-
 		if (origin === undefined) origin = true;
-
-		console.log(origin);
 
 		var intro = false, outro = false, el = [];
 
@@ -102,7 +98,7 @@ var recbuild_t = function(opt) {
 
 				info(".js file '%s'", path);
 				rhandle('/* ' + path + ' */');
-				
+
 				if(opt.flat){
 
 					action("@ extend(true, exports, require('%s'));", path);
@@ -123,8 +119,6 @@ var recbuild_t = function(opt) {
 		});
 
 		if (origin) rhandle(outro ? dir + opt.outro : __OUTRO__);
-
-		console.log(origin);
 	};
 
 	return recbuild;
