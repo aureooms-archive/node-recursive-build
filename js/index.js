@@ -1,6 +1,23 @@
 
 'use strict';
 
+
+/**
+ * Recbuild default options.
+ * 
+ * @param name name of global namespace
+ * @param index name of index files
+ * @param intro name of intro files
+ * @param outro name of outro files
+ * @param struct name of struct files
+ * @param rec whether dirs should have their own namespace
+ * @param flat whether files should have their own namespace
+ * @param strict whether the global namespace should be in strict mode
+ * @param debug flag whether or not debug messages should be printed
+ * 
+ * 
+ */
+
 var dflt = {
 	name : 'lib',
 	index : 'index.js',
@@ -12,6 +29,14 @@ var dflt = {
 	strict : true,
 	debug : false
 };
+
+
+/**
+ * Recbuild template.
+ * 
+ * @param <opt> options
+ * 
+ */
 
 var recbuild_t = function(opt) {
 
