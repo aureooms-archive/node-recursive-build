@@ -1,36 +1,36 @@
 {
-  "name": "recbuild",
-  "version": "0.0.3",
-  "description": "recursive build for node",
-  "main": "js/index.js",
-  "scripts": {
-    "test": "node test/js/run.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://aureooms@github.com/aureooms/recbuild.git"
-  },
-  "keywords": [
-    "node",
-    "recursive",
-    "build",
-    "auto"
-  ],
-  "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
-  "license": "GPL v2",
-  "bugs": {
-    "url": "https://github.com/aureooms/recbuild/issues"
-  },
-  "homepage": "https://aureooms.github.io/recbuild",
-  "dependencies": {
-    "cli-color": "^0.3.2",
-    "node.extend": "^1.0.10"
-  },
-  "devDependencies": {
-    "optimist": "^0.6.1",
-    "qunit": "^0.6.3",
-    "istanbul": "^0.2.11",
-    "coveralls": "^2.10.0",
-    "codeclimate-test-reporter": "0.0.3"
-  }
+	"bugs": {
+		"url": "https://github.com/aureooms/recbuild/issues"
+	},
+	"name": "recbuild",
+	"description": "recursive build for node",
+	"main": "js/index.js",
+	"dependencies": {
+		"node.extend": "^1.0.10",
+		"cli-color": "^0.3.2"
+	},
+	"repository": {
+		"url": "https://aureooms@github.com/aureooms/recbuild.git",
+		"type": "git"
+	},
+	"scripts": {
+		"test": "node test/js/run.js"
+	},
+	"homepage": "https://aureooms.github.io/recbuild",
+	"devDependencies": {
+		"optimist": "^0.6.1",
+		"codeclimate-test-reporter": "0.0.3",
+		"qunit": "^0.6.3",
+		"istanbul": "^0.2.11",
+		"coveralls": "^2.10.0"
+	},
+	"version": "0.0.4",
+	"license": "GPL v2",
+	"keywords": [
+		"node",
+		"recursive",
+		"build",
+		"auto"
+	],
+	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)"
 }
