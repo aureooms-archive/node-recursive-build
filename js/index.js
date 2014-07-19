@@ -47,7 +47,7 @@ var recbuild_t = function(opt) {
 
 	opt = extend({}, dflt, opt);
 
-	var __INTRO__ = '(function(exports){\n\n' + (opt.strict ? "\t'use strict';\n\n" : '');
+	var __INTRO__ = '(function(exports, undefined){\n\n' + (opt.strict ? "\t'use strict';\n\n" : '');
 	var __INTRO2_ = '(function(exports){\n\n';
 	var __OUTRO__ = util.format("})(typeof exports === 'undefined' ? this['%s'] = {} : exports);", opt.name);
 	var __OUTRO2_ = function(sub){ return util.format("})(exports['%s'] = {});", sub); };
@@ -84,7 +84,10 @@ var recbuild_t = function(opt) {
 
 		el.sort();
 
-		if (origin) rhandle(intro ? dir + opt.intro : __INTRO__);
+		if (origin) {
+			if (intro) fhandle(dir + opt.intro);
+			else       rhandle(__INTRO__);
+		}
 
 		el.forEach(function(e){
 			var path = dir + e;
@@ -143,7 +146,10 @@ var recbuild_t = function(opt) {
 			}
 		});
 
-		if (origin) rhandle(outro ? dir + opt.outro : __OUTRO__);
+		if (origin) {
+			if (outro) fhandle(dir + opt.outro);
+			else       rhandle(__OUTRO__);
+		}
 	};
 
 	return recbuild;

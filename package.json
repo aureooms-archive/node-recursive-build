@@ -4,7 +4,7 @@
   "description": "recursive build for node",
   "main": "js/index.js",
   "scripts": {
-    "test": "export DIR=node_modules/qunit/support/qunit/qunit && mkdir -p $DIR && cp support/qunit.js $DIR/ && node test/js/run.js"
+    "test": "node test/js/run.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "node.extend": "^1.0.10"
   },
   "devDependencies": {
-    "qunit": "git://github.com/gotwarlost/node-qunit.git#istanbul-coverage",
+    "optimist": "^0.6.1",
+    "qunit": "^0.6.3",
+    "istanbul": "^0.2.11",
     "coveralls": "^2.10.0",
     "codeclimate-test-reporter": "0.0.3"
   }
