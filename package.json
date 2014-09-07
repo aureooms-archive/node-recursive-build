@@ -2,12 +2,13 @@
 	"name": "aureooms-node-recursive-build",
 	"description": "recursive build for node",
 	"version": "0.0.4",
-	"license": "GPL v3",
+	"license": "AGPL-3.0",
 	"author": "aureooms",
 	"repository": {
 		"url": "https://github.com/aureooms/node-recursive-build.git",
 		"type": "git"
 	},
+	"homepage": "https://aureooms.github.io/node-recursive-build",
 	"keywords": [
 		"node",
 		"recursive",
@@ -29,7 +30,6 @@
 	"scripts": {
 		"test": "node test/js/run.js"
 	},
-	"homepage": "https://aureooms.github.io/node-recursive-build",
 	"bugs": {
 		"url": "https://github.com/aureooms/node-recursive-build/issues"
 	}
