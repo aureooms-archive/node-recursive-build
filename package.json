@@ -1,22 +1,23 @@
 {
-	"bugs": {
-		"url": "https://github.com/aureooms/node-recursive-build/issues"
-	},
 	"name": "aureooms-node-recursive-build",
 	"description": "recursive build for node",
-	"main": "js/index.js",
-	"dependencies": {
-		"node.extend": "^1.0.10",
-		"cli-color": "^0.3.2"
-	},
+	"version": "0.0.4",
+	"license": "GPL v3",
+	"author": "aureooms",
 	"repository": {
 		"url": "https://github.com/aureooms/node-recursive-build.git",
 		"type": "git"
 	},
-	"scripts": {
-		"test": "node test/js/run.js"
+	"keywords": [
+		"node",
+		"recursive",
+		"build",
+		"auto"
+	],
+	"dependencies": {
+		"node.extend": "^1.0.10",
+		"cli-color": "^0.3.2"
 	},
-	"homepage": "https://aureooms.github.io/node-recursive-build",
 	"devDependencies": {
 		"optimist": "^0.6.1",
 		"codeclimate-test-reporter": "0.0.3",
@@ -24,13 +25,12 @@
 		"istanbul": "^0.2.11",
 		"coveralls": "^2.10.0"
 	},
-	"version": "0.0.4",
-	"license": "GPL v3",
-	"keywords": [
-		"node",
-		"recursive",
-		"build",
-		"auto"
-	],
-	"author": "aureooms"
+	"main": "js/index.js",
+	"scripts": {
+		"test": "node test/js/run.js"
+	},
+	"homepage": "https://aureooms.github.io/node-recursive-build",
+	"bugs": {
+		"url": "https://github.com/aureooms/node-recursive-build/issues"
+	}
 }

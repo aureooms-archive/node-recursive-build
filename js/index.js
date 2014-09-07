@@ -3,7 +3,7 @@
 
 
 /**
- * Recbuild default options.
+ * recbuild default options.
  * 
  * @param name name of global namespace
  * @param index name of index files
@@ -32,7 +32,7 @@ var dflt = {
 
 
 /**
- * Recbuild template.
+ * recbuild template.
  * 
  * @param <opt> options
  * 
