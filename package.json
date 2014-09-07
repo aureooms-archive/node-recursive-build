@@ -1,8 +1,8 @@
 {
 	"bugs": {
-		"url": "https://github.com/aureooms/recbuild/issues"
+		"url": "https://github.com/aureooms/node-recursive-build/issues"
 	},
-	"name": "recbuild",
+	"name": "aureooms-node-recursive-build",
 	"description": "recursive build for node",
 	"main": "js/index.js",
 	"dependencies": {
@@ -10,13 +10,13 @@
 		"cli-color": "^0.3.2"
 	},
 	"repository": {
-		"url": "https://aureooms@github.com/aureooms/recbuild.git",
+		"url": "https://github.com/aureooms/node-recursive-build.git",
 		"type": "git"
 	},
 	"scripts": {
 		"test": "node test/js/run.js"
 	},
-	"homepage": "https://aureooms.github.io/recbuild",
+	"homepage": "https://aureooms.github.io/node-recursive-build",
 	"devDependencies": {
 		"optimist": "^0.6.1",
 		"codeclimate-test-reporter": "0.0.3",
@@ -25,12 +25,12 @@
 		"coveralls": "^2.10.0"
 	},
 	"version": "0.0.4",
-	"license": "GPL v2",
+	"license": "GPL v3",
 	"keywords": [
 		"node",
 		"recursive",
 		"build",
 		"auto"
 	],
-	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)"
+	"author": "aureooms"
 }
