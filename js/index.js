@@ -4,7 +4,7 @@
 
 /**
  * recbuild default options.
- * 
+ *
  * @param name name of global namespace
  * @param index name of index files
  * @param intro name of intro files
@@ -14,8 +14,8 @@
  * @param flat whether files should have their own namespace
  * @param strict whether the global namespace should be in strict mode
  * @param debug flag whether or not debug messages should be printed
- * 
- * 
+ *
+ *
  */
 
 var dflt = {
@@ -33,9 +33,9 @@ var dflt = {
 
 /**
  * recbuild template.
- * 
+ *
  * @param <opt> options
- * 
+ *
  */
 
 var recbuild_t = function(opt) {
@@ -63,7 +63,7 @@ var recbuild_t = function(opt) {
 			].join(' '));
 		};
 	};
-	
+
 	var info = opt.debug ? msg_t('info', clc.blue) : function(){};
 	var action = opt.debug ? msg_t('action', clc.magenta) : function(){};
 
@@ -96,7 +96,7 @@ var recbuild_t = function(opt) {
 				var child;
 				if (fs.existsSync(path + '/' + opt.struct)) {
 					info("struct file found in '%s'", path);
-					var struct = require(path + '/' + opt.struct);
+					var struct = JSON.parse( fs.readFileSync( path + '/' + opt.struct , "utf8" ) ) ;
 					child = recbuild_t(struct);
 
 				}
