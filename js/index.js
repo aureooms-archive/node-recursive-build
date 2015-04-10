@@ -42,7 +42,6 @@ var recbuild_t = function(opt) {
 
 	var fs = require('fs');
 	var util = require('util');
-	var clc = require('cli-color');
 	var extend = require('node.extend');
 
 	opt = extend({}, dflt, opt);
@@ -53,19 +52,18 @@ var recbuild_t = function(opt) {
 	var __OUTRO2_ = function(sub){ return util.format("})(exports['%s'] = {});", sub); };
 
 	// DEBUG
-	var msg_t = function(type, transform){
-		// transform = transform || function(s){return s;};
+	var msg_t = function(type){
 		return function(){
 			console.log([
-				clc.white(clc.bgBlack(opt.name)),
-				clc.green(type),
-				transform(util.format.apply(this, arguments))
+				opt.name,
+				type,
+				util.format.apply(this, arguments)
 			].join(' '));
 		};
 	};
 
-	var info = opt.debug ? msg_t('info', clc.blue) : function(){};
-	var action = opt.debug ? msg_t('action', clc.magenta) : function(){};
+	var info = opt.debug ? msg_t('info') : function(){};
+	var action = opt.debug ? msg_t('action') : function(){};
 
 	var recbuild = function(dir, exports, level, fhandle, rhandle, origin) {
 
