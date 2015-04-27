@@ -46,10 +46,25 @@ var recbuild_t = function(opt) {
 
 	opt = extend({}, dflt, opt);
 
-	var __INTRO__ = '(function(exports, undefined){\n\n' + (opt.strict ? "\t'use strict';\n\n" : '');
-	var __INTRO2_ = '(function(exports){\n\n';
-	var __OUTRO__ = util.format("})(typeof exports === 'undefined' ? this['%s'] = {} : exports);", opt.name);
-	var __OUTRO2_ = function(sub){ return util.format("})(exports['%s'] = {});", sub); };
+	var __INTRO__ = '( function ( ) {\n\n' +
+		(opt.strict ? "'use strict' ;\n\n" : '' ) +
+		'var definition = function ( exports , undefined ) {\n\n' ;
+	var __INTRO2_ = '( function ( exports ) { \n\n';
+	var __OUTRO__ = util.format(
+		'return exports ;\n} ;\n' +
+		'if ( typeof exports === "object" ) {\n' +
+		'\tdefinition( exports ) ;\n' +
+		'}\n' +
+		'else if ( typeof define === "function" && define.amd ) { \n' +
+		'\tdefine( "%s" , [ ] , function ( ) { return definition( { } ) ; } ) ;\n' +
+		'}\n' +
+		'else if ( typeof window === "object" && typeof window.document === "object" ) {\n' +
+		'\tdefinition( window["%s"] = { } ) ;\n' +
+		'}\n' +
+		'else console.error( "unable to detect type of module to define for %s") ;\n' +
+		'} )( ) ;',
+	opt.name , opt.name , opt.name ) ;
+	var __OUTRO2_ = function(sub){ return util.format("} )( exports['%s'] = { } ) ; ", sub); };
 
 	// DEBUG
 	var msg_t = function(type){
@@ -104,7 +119,7 @@ var recbuild_t = function(opt) {
 					action(
 						"@ recbuild('%s/', %s, %d);",
 						path,
-						opt.rec ? util.format("exports['%s'] = {}", e) : 'exports',
+						opt.rec ? util.format("exports['%s'] = { }", e) : 'exports',
 						level + 1
 					);
 
