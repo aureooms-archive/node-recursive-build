@@ -49,13 +49,13 @@ var recbuild_t = function(opt) {
 	var __INTRO__ = '( function ( ) {\n\n' +
 		(opt.strict ? "'use strict' ;\n\n" : '' ) +
 		'var definition = function ( exports , undefined ) {\n\n' ;
-	var __INTRO2_ = '( function ( exports ) { \n\n';
+	var __INTRO2_ = '( function ( exports ) {\n\n';
 	var __OUTRO__ = util.format(
 		'return exports ;\n} ;\n' +
 		'if ( typeof exports === "object" ) {\n' +
 		'\tdefinition( exports ) ;\n' +
 		'}\n' +
-		'else if ( typeof define === "function" && define.amd ) { \n' +
+		'else if ( typeof define === "function" && define.amd ) {\n' +
 		'\tdefine( "%s" , [ ] , function ( ) { return definition( { } ) ; } ) ;\n' +
 		'}\n' +
 		'else if ( typeof window === "object" && typeof window.document === "object" ) {\n' +
