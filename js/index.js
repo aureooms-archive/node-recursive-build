@@ -64,7 +64,7 @@ var recbuild_t = function(opt) {
 		'else console.error( "unable to detect type of module to define for %s") ;\n' +
 		'} )( ) ;',
 	opt.name , opt.name , opt.name ) ;
-	var __OUTRO2_ = function(sub){ return util.format("} )( exports['%s'] = { } ) ; ", sub); };
+	var __OUTRO2_ = function(sub){ return util.format("} )( exports['%s'] = { } ) ;", sub); };
 
 	// DEBUG
 	var msg_t = function(type){
