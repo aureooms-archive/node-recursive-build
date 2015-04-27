@@ -19,6 +19,7 @@
  */
 
 var dflt = {
+	fullname : 'author-js-lib',
 	name : 'lib',
 	index : 'index.js',
 	intro : 'intro.js',
@@ -63,14 +64,14 @@ var recbuild_t = function(opt) {
 		'}\n' +
 		'else console.error( "unable to detect type of module to define for %s") ;\n' +
 		'} )( ) ;',
-	opt.name , opt.name , opt.name ) ;
+	opt.fullname , opt.name , opt.fullname ) ;
 	var __OUTRO2_ = function(sub){ return util.format("} )( exports['%s'] = { } ) ;", sub); };
 
 	// DEBUG
 	var msg_t = function(type){
 		return function(){
 			console.log([
-				opt.name,
+				opt.fullname,
 				type,
 				util.format.apply(this, arguments)
 			].join(' '));

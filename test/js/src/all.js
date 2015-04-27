@@ -18,6 +18,7 @@ var rhandle_t = function(a){
 var ns = 'test-namespace';
 
 var dflt = {
+	fullname : 'aureooms-js' + ns,
 	name : ns,
 	index : 'index.js',
 	intro : 'intro.js',
