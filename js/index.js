@@ -13,7 +13,7 @@
  * @param rec whether dirs should have their own namespace
  * @param flat whether files should have their own namespace
  * @param strict whether the global namespace should be in strict mode
- * @param debug flag whether or not debug messages should be printed
+ * @param debug whether debug messages should be printed
  *
  *
  */
@@ -46,6 +46,9 @@ var recbuild_t = function(opt) {
 	var extend = require('node.extend');
 
 	opt = extend({}, dflt, opt);
+
+	// avoid variable names starting with numbers
+	if ( opt.name[0] >= "0" && opt.name[0] <= "9" ) opt.name = "_" + opt.name ;
 
 	var __INTRO__ = '( function ( ) {\n\n' +
 		(opt.strict ? "'use strict' ;\n\n" : '' ) +

@@ -271,3 +271,42 @@ test('tt-2', function (assert) {
 	deepEqual(exports, ref, 'check reference');
 });
 
+test( "numbered name" , function ( ) {
+
+	var recbuild = recbuild_t(extend({}, dflt, {
+		fullname : "aureooms-js-2SAT",
+		name : "2SAT",
+		rec : true,
+		flat : false
+	})) ;
+
+	var code = [];
+	recbuild( fmt('%s/%s/', __dirname, ns), "2SAT", -2, fhandle_t(code), rhandle_t(code));
+
+	var exports = undefined ;
+	var window = { document : { } } ;
+
+	eval(code.join('\n'));
+
+	var ref = {
+		dir1 : {
+			dir2 : {
+				file2 : {
+					prop2 : true
+				},
+				dir3 : {
+					file3 : {
+						prop3 : true
+					},
+					file4 : {
+						prop4 : true
+					}
+				}
+			}
+		}
+	};
+
+	deepEqual( window._2SAT , ref , 'check reference' ) ;
+
+} ) ;
+
